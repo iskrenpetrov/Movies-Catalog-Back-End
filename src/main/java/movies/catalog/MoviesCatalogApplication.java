@@ -22,16 +22,10 @@ public class MoviesCatalogApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/delete").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/delete/{id}").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/create-category").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/update").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/movies").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/movies/{id2}").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/movies/{id2}/update").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/delete").allowedOrigins("http://localhost:3000");
-                registry.addMapping("/{id}/delete/{id2}").allowedOrigins("http://localhost:3000");
+                registry.addMapping("/categories").allowedOrigins("http://localhost:3000");
+                registry.addMapping("/categories/{id}").allowedOrigins("http://localhost:3000");
+                registry.addMapping("/categories/{id}/movies").allowedOrigins("http://localhost:3000");
+                registry.addMapping("/categories/{id}/movies/{id2}").allowedOrigins("http://localhost:3000");
             }
         };
     }

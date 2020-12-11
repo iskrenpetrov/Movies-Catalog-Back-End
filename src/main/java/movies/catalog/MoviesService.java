@@ -23,6 +23,10 @@ public class MoviesService {
         return movieRepo.findById(id);
     }
 
+    public Optional<Movies> getMovieByCategoryId(long id, long id2){
+        return movieRepo.findByIdAndCategoryId(id, id2);
+    }
+
     public void saveMovie(@RequestBody Movies movie){
         movieRepo.save(movie);
     }
@@ -31,11 +35,15 @@ public class MoviesService {
         return movieRepo.findById(id).map(newMovie->{return movieRepo.save(movie);});
     }
 
-    public void deleteMovie(long id){
-        movieRepo.deleteById(id);
+    public void deleteMovie(Movies movie){
+        movieRepo.delete(movie);
     }
 
     public void deleteAllMovies(){
         movieRepo.deleteAll();
+    }
+
+    public void deleteById(Long id) {
+        movieRepo.deleteById(id);
     }
 }

@@ -17,7 +17,7 @@ public class Movies {
     private String description;
     @JsonIgnore
     @ManyToOne
-    //@JoinColumn(name="category_id")
+    @JoinColumn(name="category_id")
     private Categories category;
 
     public long getId() {

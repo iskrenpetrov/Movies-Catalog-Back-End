@@ -34,7 +34,7 @@ public class Categories {
         return name;
     }
 
-    public Categories setName(){
+    public Categories setName(String name){
         this.name=name;
         return this;
     }
